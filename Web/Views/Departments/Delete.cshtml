@@ -1,0 +1,44 @@
+﻿@model TeamHolidayPlanner.Domain.Department
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete Department</h2>
+<hr />
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GroupName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="DepartmentID" />
+        <p>&nbsp;</p>
+        <input type="submit" value="Delete" class="btn btn-primary" /> &nbsp;
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

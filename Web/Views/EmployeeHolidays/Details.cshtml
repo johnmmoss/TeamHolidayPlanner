@@ -1,0 +1,60 @@
+﻿@model TeamHolidayPlanner.Domain.EmployeeHoliday
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EmployeeHoliday</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Employee.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HolidayPeriod)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HolidayPeriod.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Authorised)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Authorised)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorisedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AuthorisedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorisedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AuthorisedBy)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.EmployeeHolidayId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

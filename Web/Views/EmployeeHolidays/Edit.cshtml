@@ -1,0 +1,64 @@
+﻿@model TeamHolidayPlanner.Domain.EmployeeHoliday
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>EmployeeHoliday</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="EmployeeHolidayId" />
+            <div class="form-group">
+                <label asp-for="EmployeeID" class="control-label"></label>
+                <select asp-for="EmployeeID" class="form-control" asp-items="ViewBag.EmployeeID"></select>
+                <span asp-validation-for="EmployeeID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HolidayPeriodID" class="control-label"></label>
+                <select asp-for="HolidayPeriodID" class="form-control" asp-items="ViewBag.HolidayPeriodID"></select>
+                <span asp-validation-for="HolidayPeriodID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate" class="control-label"></label>
+                <input asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Authorised" class="control-label"></label>
+                <input asp-for="Authorised" class="form-control" />
+                <span asp-validation-for="Authorised" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorisedDate" class="control-label"></label>
+                <input asp-for="AuthorisedDate" class="form-control" />
+                <span asp-validation-for="AuthorisedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorisedBy" class="control-label"></label>
+                <input asp-for="AuthorisedBy" class="form-control" />
+                <span asp-validation-for="AuthorisedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
