@@ -16,7 +16,7 @@ namespace Web.AcceptanceTests
         private static string dataFilePath = ConfigurationSettings.AppSettings["DataFilePath"];
 
         [BeforeFeature]
-        public void BeforeFeature()
+        public static void BeforeFeature()
         {
             var directoryPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var sqlFilePath = Path.Combine(directoryPath, dataFilePath);
@@ -30,7 +30,7 @@ namespace Web.AcceptanceTests
         }
 
         [AfterFeature]
-        public void AfterFeature()
+        public static void AfterFeature()
         {
             // Clear up the webdriver
             var webDriver = FeatureContext.Current.Get<IWebDriver>();
@@ -39,7 +39,7 @@ namespace Web.AcceptanceTests
         }
 
         [BeforeScenario]
-        public void BeforeScenario()
+        public static void BeforeScenario()
         {
             // At the begining of the scenario, we are on the homepage
             var webDriver = FeatureContext.Current.Get<IWebDriver>();
@@ -48,7 +48,7 @@ namespace Web.AcceptanceTests
         }
 
         [AfterScenario]
-        public void AfterScenario()
+        public static void AfterScenario()
         {
             //TODO: implement logic that has to run after executing each scenario
         }
