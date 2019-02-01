@@ -36,6 +36,9 @@ namespace TeamHolidayPlanner.Data
                 .HasOne(bc => bc.Permission)
                 .WithMany(c => c.RolePermissions)
                 .HasForeignKey(bc => bc.PermissionID);
+
+
+
         }
     }
 }
