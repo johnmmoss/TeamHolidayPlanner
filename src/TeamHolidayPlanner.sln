@@ -17,8 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5DD5C53F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{35C2A2F2-59E0-497C-82D3-9D5B642BB387}"
 	ProjectSection(SolutionItems) = preProject
-		build.cake = build.cake
-		build.ps1 = build.ps1
+		..\build.cake = ..\build.cake
+		..\build.ps1 = ..\build.ps1
 	EndProjectSection
 EndProject
 Global
