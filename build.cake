@@ -1,10 +1,12 @@
+#load build/path.cake
+
 var target = Argument("Target", "Build");
 var configuration = Argument("Configuration", "Release");
 
 Task("Restore")
 	.Does(() =>
 {
-		NuGetRestore("TeamHolidayPlanner.sln");
+		NuGetRestore(Paths.SolutionFile);
 });
 
 Task("Build")
@@ -14,7 +16,7 @@ Task("Build")
 	Information("Building TeamHolidayPlaner.sln");
 
 	DotNetBuild(
-			  "TeamHolidayPlanner.sln",
+			  Paths.SolutionFile,
 			  settings => settings
 							.SetConfiguration(configuration)
 							.WithTarget("Build"));
